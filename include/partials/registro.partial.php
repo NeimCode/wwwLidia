@@ -1,39 +1,40 @@
 <section class="main-section">
             <h2 class="section-title">Registre</h2>
-            <form class="register-form" form method="post" action="processaFormulari.php">
-                <label for="name">Nom: <span>*</span></label>
-                <input type="text" id="name" name="name" required>
+            <form class="register-form" form method="post" action="./include/procesaRegistro.php">
+                <label for="nombre">Nom: <span>*</span></label>
+                <input type="text" id="name" name="nombre" required>
 
-                <label for="surname">Cognoms:</label>
-                <input type="text" id="surname" name="surname">
+                <label for="apellido">Cognoms:</label>
+                <input type="text" id="surname" name="apellido">
 
-                <label for="address">Adreça:</label>
-                <input type="text" id="address" name="address">
+                <label for="direccion">Adreça:</label>
+                <input type="text" id="address" name="direccion">
 
-                <label for="email">Correu Electrònic: <span>*</span></label>
-                <input type="email" id="email" name="email" required>
+                <label for="correo">Correu Electrònic: <span>*</span></label>
+                <input type="email" id="email" name="correo" required>
 
                 <label for="password">Contrasenya:</label>
                 <input type="password" id="password" name="password">
 
-                <label for="city">Població:</label>
-                <select id="city" name="city">
+                <label for="poblacion">Població:</label>
+                <select id="city" name="poblacion">
                     <option value="">Tria una població...</option>
-                    <option value="valencia">València</option>
-                    <option value="castello">Castelló</option>
-                    <option value="alicante">Alacant</option>
+                    <option value="xativa">Xátiva</option>
+                    <option value="genoves">Genovés</option>
+                    <option value="novetle">Novetlè</option>
+                    <option value="losaRanes">La Llosa de Ranes</option>
                 </select>
 
-                <label for="phone">Telèfon:</label>
-                <input type="tel" id="phone" name="phone">
+                <label for="tel">Telèfon:</label>
+                <input type="tel" id="phone" name="tel">
 
                 <fieldset>
                     <legend>Horari repartiment:</legend>
                     <label>
-                        <input type="radio" name="schedule" value="mati"> Matí
+                        <input type="radio" name="horaRepar" value="mati"> Matí
                     </label>
                     <label>
-                        <input type="radio" name="schedule" value="vesprada"> Vesprada
+                        <input type="radio" name="horaRepar" value="vesprada"> Vesprada
                     </label>
                 </fieldset>
 

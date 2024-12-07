@@ -11,8 +11,7 @@
             break;
         case 'tienda':
             include'./include/partials/tienda.partial.php';
-            break;
-        
+            break;        
         default:
             # code...
             break;

@@ -41,7 +41,7 @@ body {
     padding: 10px;
 }
 
-.nav-bar button {
+.nav-bar a {
     margin: 0 10px;
     padding: 10px 20px;
     background-color: #87ceeb;
@@ -51,7 +51,7 @@ body {
     font-weight: bold;
 }
 
-.nav-bar button:hover {
+.nav-bar a:hover {
     background-color: #4682b4;
     color: #fff;
 }
@@ -98,7 +98,6 @@ body {
     color: #000;
 }
 
-/* Register Form */
 .register-form {
     background-color: #fdfdb2;
     margin: 20px auto;

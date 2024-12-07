@@ -1,6 +1,6 @@
 <section class="main-section">
             <h2 class="section-title">Registre</h2>
-            <form class="register-form">
+            <form class="register-form" form method="post" action="processaFormulari.php">
                 <label for="name">Nom: <span>*</span></label>
                 <input type="text" id="name" name="name" required>
 

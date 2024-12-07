@@ -94,4 +94,45 @@
         echo "Sin valor";
     }
     ?>
+        <p><strong>Puntuacion</strong></p>
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['puntuar'])) {
+        $puntuacion = trim(htmlspecialchars($_POST['puntuar']));
+    }
+    if (isset($_POST['puntuar']) && strcmp(trim(htmlspecialchars($_POST['puntuar'])), "") != 0) {
+        switch ($puntuacion) {
+            case 1:
+                for ($i = 0; $i < $puntuacion; $i++) {
+                    echo '<img src="../img/gato.jpg" alt="losaranes">';
+                }
+                break;
+            case 2:
+                for ($i = 0; $i < $puntuacion; $i++) {
+                    echo '<img src="../img/gato.jpg" alt="losaranes">';
+                }
+                break;
+            case 3:
+                for ($i = 0; $i < $puntuacion; $i++) {
+                    echo '<img src="../img/gato.jpg" alt="losaranes">';
+                }
+                break;
+            case 4:
+                for ($i = 0; $i < $puntuacion; $i++) {
+                    echo '<img src="../img/gato.jpg" alt="losaranes">';
+                }
+                break;
+            case 5:
+                for ($i = 0; $i < $puntuacion; $i++) {
+                    echo '<img src="../img/gato.jpg" alt="losaranes">';
+                }
+                break;
+            default:
+                # code...
+                break;
+        }
+
+    } else {
+        echo "Sin valor";
+    }
+    ?>
 </section>

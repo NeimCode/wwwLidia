@@ -1,6 +1,6 @@
 <h1>Contacte</h1>
         </div>
-        <form action="./include/procesaContacto.php" method="post" class="register-form">
+        <form action="./include/procesaContacto.php" method="post" class="registro">
             <div class="campo">
                 <label for="correo">Correu electrònic: <span>*</span></label>
                 <input type="email" id="correo" name="correo" required>

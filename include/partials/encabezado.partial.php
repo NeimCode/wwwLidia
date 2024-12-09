@@ -3,6 +3,3 @@
         <h2>Fruiteria Verduleria Online</h2>
     </header>
 
-    <?php 
-    include("./include/partials/navegador.partial.php");
-    ?>

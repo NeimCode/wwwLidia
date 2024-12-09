@@ -1,4 +1,6 @@
 <?php
+
+if (basename($_SERVER['PHP_SELF']) == 'index.php') {
     switch ($apartat) {
         case 'inicio':
             include'./include/partials/inicio.partial.php';
@@ -13,7 +15,29 @@
             include'./include/partials/tienda.partial.php';
             break;        
         default:
-            # code...
+            include'./include/partials/inicio.partial.php';
             break;
+    }
+
+}
+
+    if (basename($_SERVER['PHP_SELF']) == 'procesaRegistro.php') {
+        switch ($apartat) {
+            case 'inicio':
+                include'./partials/inicio.partial.php';
+                break;
+            case 'registro':
+                include'./partials/registro.partial.php';
+                break;
+            case 'contacto':
+                include'./partials/contacto.partial.php';
+                break;
+            case 'tienda':
+                include'./partials/tienda.partial.php';
+                break;        
+            default:
+            echo "Nada :D";
+                break;
+        }
     }
 ?>

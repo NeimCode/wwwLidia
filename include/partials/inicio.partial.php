@@ -1,5 +1,5 @@
 <main>
-        <section class="main-section">
+        <section class="seccionPrincipal">
             <h2 class="section-title">Inici</h2>
             <div class="welcome-box">
                 <h3>Benvinguda</h3>

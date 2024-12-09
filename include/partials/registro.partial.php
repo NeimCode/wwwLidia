@@ -1,6 +1,6 @@
-<section class="main-section">
+<section class="seccionPrincipal">
     <h2 class="section-title">Registre</h2>
-    <form class="register-form" form method="post" action="./include/procesaRegistro.php">
+    <form class="registro" form method="post" action="./include/procesaRegistro.php">
         <label for="nombre">Nom: <span>*</span></label>
         <input type="text" id="name" name="nombre" required>
 
@@ -41,10 +41,10 @@
         <fieldset>
             <legend>Estilos registro:</legend>
             <label>
-                <input type="radio" name="estiloRegistro" value="mati"> Morado
+                <input type="radio" name="estiloRegistro" value="morado"> Morado
             </label>
             <label>
-                <input type="radio" name="estiloRegistro" value="vesprada"> Amarillo
+                <input type="radio" name="estiloRegistro" value="amarillo"> Amarillo
             </label>
         </fieldset>
         <label for="number">Puntuar del 1-5:</label>

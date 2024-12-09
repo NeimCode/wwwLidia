@@ -15,6 +15,8 @@ body {
     text-align: center;
     padding: 10px;
     border-bottom: 2px solid #000;
+    border-radius: 30px;
+
 }
 
 .header h1 {
@@ -32,15 +34,14 @@ body {
     border-radius: 10px;
 }
 
-/* Navigation Bar */
-.nav-bar {
+.navegador {
     display: flex;
     justify-content: center;
     background-color: #cce7f3;
     padding: 10px;
 }
 
-.nav-bar a {
+.navegador a {
     margin: 0 10px;
     padding: 10px 20px;
     background-color: #87ceeb;
@@ -50,14 +51,15 @@ body {
     font-weight: bold;
 }
 
-.nav-bar a:hover {
+.navegador a:hover {
     background-color: #4682b4;
     color: #fff;
 }
 
-.main-section {
+.seccionPrincipal {
     text-align: center;
     margin: 20px;
+    border: #000 solid 1px;
 }
 
 .section-title {
@@ -95,9 +97,10 @@ body {
     border-top: 2px solid #000;
     font-size: 14px;
     color: #000;
+    border-radius: 30px;
 }
 
-.register-form {
+.registro {
     background-color: #fdfdb2;
     margin: 20px auto;
     padding: 20px;
@@ -106,14 +109,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.register-form label {
+.registro label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
 }
 
-.register-form input,
-.register-form select {
+.registro input,
+.registro select {
     width: 90%;
     padding: 10px;
     margin: 5px 0;
@@ -121,24 +124,24 @@ body {
     border-radius: 5px;
 }
 
-.register-form fieldset {
+.registro fieldset {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
 }
 
-.register-form legend {
+.registro legend {
     font-weight: bold;
 }
 
-.register-form .form-buttons {
+.registro .form-buttons {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
 
-.register-form button {
+.registro button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -146,14 +149,18 @@ body {
     cursor: pointer;
 }
 
-.register-form button[type="submit"] {
+.registro button[type="submit"] {
     background-color: #87ceeb;
 }
 
-.register-form button[type="reset"] {
+.registro button[type="reset"] {
     background-color: #ff6961;
 }
 
-.register-form button:hover {
+.registro button:hover {
     opacity: 0.8;
+}
+
+.gatitos img{
+    width: 10%;
 }

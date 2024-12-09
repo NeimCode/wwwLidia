@@ -1,25 +1,55 @@
 <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre'])) {
-        $nombre = trim(htmlspecialchars($_POST['nombre']));}
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['apellido'])) {
-        $apellido = trim(htmlspecialchars($_POST['apellido']));}
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['direccion'])) {
-        $direccion = trim(htmlspecialchars($_POST['direccion']));
-    }
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['correo'])) {
-        $correo = trim(htmlspecialchars($_POST['correo']));}
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
-        $password = trim(htmlspecialchars($_POST['password']));
-    }
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['tel'])) {
-        $tel = trim(htmlspecialchars($_POST['tel']));
-    }
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['horaRepar'])) {
-        $horaRepar = trim(htmlspecialchars($_POST['horaRepar']));
-    }
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['poblacion'])) {
-        $poblacion = trim(htmlspecialchars($_POST['poblacion']));
-    }
+
+$nombre ="";
+$apellido ="";
+$correo ="";
+$password ="";
+$tel ="";
+$horaRepar ="";
+$poblacion ="";
+
+
+if (isset($_POST['nombre'])){
+$nombre=trim(htmlspecialchars($_POST['nombre']));
+} else{
+    $nombre ="Sin Valor";
+}
+
+if (isset($_POST['apellido'])){
+$apellido=trim(htmlspecialchars($_POST['apellido']));
+} else{
+    $apellido ="Sin Valor";
+}
+if (isset($_POST['direccion'])){
+$direccion=trim(htmlspecialchars($_POST['direccion']));
+} else{
+    $direccion ="Sin Valor";
+}
+if (isset($_POST['correo'])){
+$correo=trim(htmlspecialchars($_POST['correo']));
+} else{
+    $correo ="Sin Valor";
+}
+if (isset($_POST['password'])){
+$password=trim(htmlspecialchars($_POST['password']));
+} else{
+    $password ="Sin Valor";
+}
+if (isset($_POST['tel'])){
+$tel=trim(htmlspecialchars($_POST['tel']));
+} else{
+    $tel ="Sin Valor";
+}
+if (isset($_POST['horaRepar'])){
+$horaRepar=trim(htmlspecialchars($_POST['horaRepar']));
+} else{
+    $horaRepar ="Sin Valor";
+}
+if (isset($_POST['poblacion'])){
+$poblacion=trim(htmlspecialchars($_POST['poblacion']));
+} else{
+    $poblacion ="Sin Valor";
+}
 ?>
 
 <!DOCTYPE html>

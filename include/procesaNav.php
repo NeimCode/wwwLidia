@@ -36,7 +36,6 @@ if (basename($_SERVER['PHP_SELF']) == 'index.php') {
                 include'./partials/tienda.partial.php';
                 break;        
             default:
-            echo "Nada :D";
                 break;
         }
     }

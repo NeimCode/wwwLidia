@@ -1,16 +1,11 @@
-<section class="registro">
+<section class="registro" id="registros">
     <p><strong>Nombre:</strong></p>
     <?php
         echo $nombre;
     ?>
     <p><strong>Apellidos:</strong></p>
     <?php
-    if (isset($_POST['apellido']) && strcmp(trim(htmlspecialchars($_POST['apellido'])), "") != 0) {
         echo $apellido;
-    } else {
-        echo "Sin valor";
-    }
-
     ?>
     <p><strong>Dirección:</strong></p>
     <?php

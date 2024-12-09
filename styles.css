@@ -107,7 +107,7 @@ body {
     border-radius: 10px;
     width: 60%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    justify-content: center;}
 
 .registro label {
     display: block;
@@ -161,6 +161,13 @@ body {
     opacity: 0.8;
 }
 
-.gatitos img{
-    width: 10%;
+.gatito{
+    width: 30%;
+}
+
+#registros p{
+    color: #ff0000;
+}
+#registros span{
+    color: rgb(156, 0, 0);
 }

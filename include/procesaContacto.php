@@ -1,27 +1,51 @@
-<h1>Contacte</h1>
-<div class="campo">
-    <p><strong>Correo electrónico:</strong></p>
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['correo'])) {
-        $correo = trim(htmlspecialchars($_POST['correo']));
-        echo $correo;
+<?php
+ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['mensaje'])) {
+    $mensaje = trim(htmlspecialchars($_POST['mensaje']));
+ }
+
+ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['asunto'])) {
+    $asunto = trim(htmlspecialchars($_POST['asunto']));
+    echo $asunto;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['correo'])) {
+    $correo = trim(htmlspecialchars($_POST['correo']));
+}
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruiteria Verduleria Online</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <?php 
+    $apartat="";
+    if(isset($_GET['apartat'])){
+    $apartat = $_GET['apartat'];
     }
+
     ?>
+    
+</head>
+<body>
+    <div class="wrapper">
+<?php 
+include("./partials/encabezado.partial.php");
+include("./partials/navegador.partial.php");
+include("./procesaNav.php");
+include("./partials/procesaContacto.partial.php");
+include("./partials/pie.partial.php");
+?>
+
 </div>
-<div class="campo">
-    <p><strong>Asunto:</strong></p>
+</body>
+</html>
+
     <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['asunto'])) {
-        $asunto = trim(htmlspecialchars($_POST['asunto']));
-        echo $asunto;
-    }
-    ?>
-</div>
-<div class="campo">
-    <p><strong>Mensaje:</strong></p>
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['mensaje'])) {
-        $mensaje = trim(htmlspecialchars($_POST['mensaje']));
+   
         /* En processar el missatge de la pàgina de contacte, mostra en la pàgina de
 processat una llista (<ul>) sense pics (list-style-type=none;) i inline-block
 (display:inline-block;) en la que cada paraula del comentari és un element
@@ -35,11 +59,6 @@ llarga de 10 caràcters, s'ha de mostrar amb el text de color blanc i el fons
 negre.
 Utilitza la funció explode() per tractar per separat les paraules del missatge
 enviat. El separador és l'espai " ". */
-        $explotado = explode(' ', $mensaje);
-        for ($i=0; $i < count($explotado) ; $i++) { 
-            echo $explotado[$i]; 
-        }
 
-}
     ?>
 </div>

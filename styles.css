@@ -90,6 +90,31 @@ body {
     border: 2px solid #ddd;
 }
 
+
+.especial{
+    color: #ff0d00 !important;
+    background-color: #ffaca8;
+    border: #ff6961 1px solid;
+}
+
+.masDiez{
+    color: #ffffff !important;
+    background-color: #000000;
+    border: #686868 1px solid;
+}
+
+.gatos{
+    color: #f6b8c8 !important;
+    background-color: #a6234d;
+    border: #eb88c7 1px solid;
+}
+
+.elquesea{
+    color: #000000 !important;
+    background-color: #858585;
+    border: #000000 1px solid;
+}
+
 .footer {
     background-color: #d3d3d3;
     text-align: center;

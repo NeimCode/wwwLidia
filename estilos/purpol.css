@@ -170,18 +170,18 @@ body {
     width: 30%;
 }
 
-#registros p {
+.registros p {
     display: flex;
     align-items: center;
     gap: 10px; 
     color: #6a1b9a; 
 }
 
-#registros span {
+.registros span {
     margin-left: 5px; 
     color: #9a67ea;
 }
 
-#registros img {
+.registros img {
     width: 50%;
 }

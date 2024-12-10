@@ -108,6 +108,7 @@ body {
     width: 60%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-content: center;
+    gap: 10px;         /* Agrega espacio entre las imágenes */
 }
 
 .registro label {
@@ -162,8 +163,16 @@ body {
     opacity: 0.8;
 }
 
-.gatito{
-    width: 30%;
+.gatito {
+    display: inline-block;
+    max-width: 100px;      
+    margin: 5px;            
+    vertical-align: middle; 
+}
+
+#registros {
+    flex-wrap: wrap;   /* Hace que las imágenes se acomoden a la siguiente línea cuando no haya espacio */
+
 }
 
 #registros p {
@@ -179,5 +188,17 @@ body {
 }
 
 #registros img {
-    width: 50%;
+    width: 10%;
+}
+
+#numero {
+    display: inline-block;
+     width: 50px;
+     margin-right: 10px;
+}
+
+#slider {
+    display: inline-block;
+     width: 30%;
+     margin-right: 10px;
 }

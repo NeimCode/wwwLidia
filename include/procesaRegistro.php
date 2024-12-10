@@ -8,13 +8,21 @@ $horaRepar ="";
 $poblacion ="";
 $direccion ="";
 $puntuacion ="";
-
+$estiloRegistro="";
+$multiplicador = "";
 
 if (isset($_POST['nombre'])){
 $nombre=trim(htmlspecialchars($_POST['nombre']));
 } else{
     $nombre ="Sin Valor";
 }
+
+if (isset($_POST['multiplicador'])){
+    $multiplicador=trim(htmlspecialchars($_POST['multiplicador']));
+    } else{
+        $multiplicador ="Sin Valor";
+    }
+
 if (isset($_POST['apellido']) && trim($_POST['apellido']) !== '') {
     $apellido = trim(htmlspecialchars($_POST['apellido']));
 } else {
@@ -88,8 +96,8 @@ if (isset($_POST['poblacion'])){
 }
 
 if (isset($_POST['puntuacion'])){
-    if ($puntuacion = ' '){
-    $puntuacion = 'Sin valor';
+    if ($puntuacion == ' '){
+    $puntuacion = 'Sin Valor';
     } else{
         $puntuacion=trim(htmlspecialchars($_POST['puntuacion']));
 
@@ -97,6 +105,7 @@ if (isset($_POST['puntuacion'])){
 } else{
     $puntuacion ="Sin Valor";
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -105,26 +114,24 @@ if (isset($_POST['puntuacion'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruiteria Verduleria Online</title>
+    <link rel="stylesheet" href="../styles.css">
+
     <?php 
     $apartat="";
     if(isset($_GET['apartat'])){
     $apartat = $_GET['apartat'];
     }
-    $estiloRegistro="";
-    if(isset($_GET['estiloRegistro'])){
-        $estiloRegistro = $_GET['estiloRegistro'];
-        }
 
+    if(isset($_POST['estiloRegistro'])){
+        $estiloRegistro = $_POST['estiloRegistro'];
+        }
 
     switch ($estiloRegistro) {
         case 'amarillo':
             echo '<link rel="stylesheet" href="../estilos/amarillo.css">';
             break;
         case 'morado':
-            echo '<link rel="stylesheet" href="../estilos/morado.css">';
-            break;
-        default:
-        echo '<link rel="stylesheet" href="../styles.css">';
+            echo '<link rel="stylesheet" href="../estilos/purpol.css">';
             break;
     }
 

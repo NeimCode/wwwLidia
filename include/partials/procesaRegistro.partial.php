@@ -51,35 +51,38 @@
         ?></p>
     <p><strong>Puntuacion</strong>
         <?php
+                echo $puntuacion . "*" .$multiplicador;
+
+        echo "<div class='img-container'>";
         switch ($puntuacion) {
             case 1:
-                for ($i = 0; $i < $puntuacion; $i++) {
-                    echo '<img src="../../img/gato.jpg" alt="losaranes" class="gatito">';
+                for ($i = 0; $i < $puntuacion * $multiplicador; $i++) {
+                    echo '<img src="../img/gato1.png" alt="losaranes" class="gatito">';
                 }
                 break;
             case 2:
-                for ($i = 0; $i < $puntuacion; $i++) {
-                    echo '<img src="../../img/gato.jpg" alt="losaranes" class="gatito">';
+                for ($i = 0; $i < $puntuacion * $multiplicador; $i++) {
+                    echo '<img src="../img/gato2.png" alt="losaranes" class="gatito">';
                 }
                 break;
             case 3:
-                for ($i = 0; $i < $puntuacion; $i++) {
-                    echo '<img src="../../img/gato.jpg" alt="losaranes"> class="gatito"';
+                for ($i = 0; $i < $puntuacion * $multiplicador; $i++) {
+                    echo '<img src="../img/gato3.png" alt="losaranes"  class="gatito">';
                 }
                 break;
             case 4:
-                for ($i = 0; $i < $puntuacion; $i++) {
-                    echo '<img src="../../img/gato.jpg" alt="losaranes"> class="gatito"';
+                for ($i = 0; $i < $puntuacion * $multiplicador; $i++) {
+                    echo '<img src="../img/gato4.png" alt="losaranes" class="gatito">';
                 }
                 break;
             case 5:
-                for ($i = 0; $i < $puntuacion; $i++) {
-                    echo '<img src="../../img/gato.jpg" alt="losaranes" class="gatito">';
+                for ($i = 0; $i < $puntuacion * $multiplicador; $i++) {
+                    echo '<img src="../img/gato5.png" alt="losaranes" class="gatito">';
                 }
                 break;
             default:
-                # code...
                 break;
         }
+        echo "</div>";
         ?></p>
 </section>

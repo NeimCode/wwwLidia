@@ -1,4 +1,5 @@
 <section class="seccionPrincipal">
+
     <h2 class="section-title">Registre</h2>
     <form class="registro" form method="post" action="./include/procesaRegistro.php">
         <label for="nombre">Nombre: <span>*</span></label>
@@ -38,21 +39,29 @@
             </label>
         </fieldset>
 
-        <fieldset>
-            <legend>Estilos registro:</legend>
-            <label>
-                <input type="radio" name="estiloRegistro" value="morado"> Morado
-            </label>
-            <label>
-                <input type="radio" name="estiloRegistro" value="amarillo"> Amarillo
-            </label>
-        </fieldset>
-        <label for="number">Puntuar del 1-5:</label>
-        <input type="number" class="form-control" name="puntuar" value="puntuacion" min="0" max="5">
+<fieldset>
+    <legend>Estilos registro:</legend>
+    <label>
+        <input type="radio" name="estiloRegistro" value="morado" id="morado">
+        <span>Morado</span>
+    </label>
+    <label>
+        <input type="radio" name="estiloRegistro" value="amarillo" id="amarillo">
+        <span>Amarillo</span>
+    </label>
+</fieldset>
+
+<label for="number">Puntuar del 1-5:</label>
+<input type="number" class="form-control" name="puntuacion" value="0" min="1" max="5" id="numero">
+<input type="range" min="1" max="100" value="1" id="slider" name="multiplicador">
+
+
         <div class="form-buttons">
             <button type="submit">Envia</button>
             <button type="reset">Neteja</button>
         </div>
+
+        
 
     </form>
 </section>

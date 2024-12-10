@@ -15,8 +15,8 @@
 <body>
     <div class="wrapper">
 <?php 
-include("./include/partials/encabezado.partial.php");
 include("./include/partials/data.partial.php");
+include("./include/partials/encabezado.partial.php");
 include("./include/partials/navegador.partial.php");
 include("./include/procesaNav.php");
 include("./include/partials/pie.partial.php");

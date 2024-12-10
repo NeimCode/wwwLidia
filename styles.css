@@ -62,7 +62,7 @@ body {
     border: #000 solid 1px;
 }
 
-.section-title {
+.seccionBienvenida {
     background-color: #ff9966;
     color: #fff;
     padding: 10px;
@@ -230,8 +230,19 @@ body {
 
 .data{
     border: green 1px solid;
-    padding: 1%;
+    padding: 10px;
     border-radius: 40px;
     background-color: white;
     color: green;
+    position: absolute;
+    top: 10px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
 }

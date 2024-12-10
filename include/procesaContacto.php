@@ -5,7 +5,6 @@
 
  if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['asunto'])) {
     $asunto = trim(htmlspecialchars($_POST['asunto']));
-    echo $asunto;
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['correo'])) {

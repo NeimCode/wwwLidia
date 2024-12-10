@@ -1,34 +1,41 @@
+<section class="seccionPrincipal">
+<h2 class="seccionBienvenida">Contacto datos recibidos</h2>
+
 <section class="registro" id="registros">
-<h1>Contacte</h1>
 <div class="campo">
-    <p><strong>Correo electrónico:</strong></p>
+    <p><strong>Correo electrónico:</strong>
     <?php
         echo $correo;
     ?>
-</div>
+</div></p>
 <div class="campo">
-    <p><strong>Asunto:</strong></p>
+    <p><strong>Asunto:</strong>
     <?php
         echo $asunto;
-    ?>
+    ?></p>
 </div>
 <div class="campo">
-    <p><strong>Mensaje:</strong></p>
+    <p><strong>Mensaje:</strong>
     <?php
+    echo "<ul>";
+
 $explotado = explode(' ', $mensaje);
 for ($i = 0; $i < count($explotado); $i++) { 
     if ($explotado[$i] == 'Fruita' || $explotado[$i] == 'Verdura') {
-        echo '<span class="especial">' . $explotado[$i] . '</span>';
+        echo '<li><span class="especial">' . $explotado[$i] . '</span></li>';
     } else if (strlen($explotado[$i]) >= 10) {
-        echo '<span class="masDiez">' . $explotado[$i] . '</span>';
+        echo '<li><span class="masDiez">' . $explotado[$i] . '</span></li>';
 
     } else if ($explotado[$i] == 'Gatos' || $explotado[$i] == 'gatos') {
-        echo '<span class="gatos">' . $explotado[$i] . '</span>';
+        echo '<li><span class="gatos">' . $explotado[$i] . '</span></li>';
 
     } else {
-        echo '<span class="elquesea">' . $explotado[$i] . '</span>';
+        echo '<li><span class="elquesea">' . $explotado[$i] . '</span></li>';
 
     }
 }
-?>
+    echo '</ul>';
+
+?></p>
+</section>
 </section>

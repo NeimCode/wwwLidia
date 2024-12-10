@@ -1,20 +1,21 @@
-<h1>Contacte</h1>
-        </div>
+<section class="seccionPrincipal">
+<h2 class="seccionBienvenida">Contacto</h2>
         <form action="./include/procesaContacto.php" method="post" class="registro">
             <div class="campo">
-                <label for="correo">Correu electrònic: <span>*</span></label>
+                <label for="correo">Correo Electrónico: <span>*</span></label>
                 <input type="email" id="correo" name="correo" required>
             </div>
             <div class="campo">
-                <label for="asunto">Assumpte: <span>*</span></label>
+                <label for="asunto">Asunto: <span>*</span></label>
                 <input type="text" id="asunto" name="asunto" required>
             </div>
             <div class="campo">
-                <label for="mensaje">Missatge: <span>*</span></label>
-                <textarea id="mensaje" name="mensaje" rows="5" required>Escriu ací el teu missatge</textarea>
+                <label for="mensaje">Mensaje: <span>*</span></label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
             </div>
             <div class="botones">
                 <button type="submit" class="btn enviar">Envia</button>
                 <button type="reset" class="btn neteja">Neteja</button>
             </div>
         </form>
+</section>

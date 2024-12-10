@@ -1,6 +1,6 @@
 <section class="seccionPrincipal">
 
-    <h2 class="section-title">Registre</h2>
+    <h2 class="seccionBienvenida">Registre</h2>
     <form class="registro" id=   form method="post" action="./include/procesaRegistro.php">
         <label for="nombre">Nombre: <span>*</span></label>
         <input type="text" id="name" name="nombre" required>

@@ -10,6 +10,14 @@ $direccion ="";
 $puntuacion ="";
 $estiloRegistro="";
 $multiplicador = "";
+include ("./datos.php");
+
+if (isset($_POST["frutas"])){
+    $frutas=$_POST["frutas"];
+    } else{
+        $frutas = "Sin Valor";
+    }
+    
 
 if (isset($_POST['nombre'])){
 $nombre=trim(htmlspecialchars($_POST['nombre']));
@@ -84,9 +92,12 @@ if (isset($_POST['horaRepar'])){
     $horaRepar="Sin Valor";
 }
 
-if (isset($_POST['poblacion'])){
-    if ($poblacion == ''){
+if (isset($_POST['poblacion']) && array_key_exists($_POST['poblacion'], $datosPoblacion)) {
+    $poblacion = $_POST['poblacion'];
+    $datosPoblacion = $datosPoblacion[$poblacion];
+    if ($poblacion == ' '){
     $poblacion = 'Sin valor';
+
     } else{
         $poblacion=trim(htmlspecialchars($_POST['poblacion']));
 
@@ -94,6 +105,8 @@ if (isset($_POST['poblacion'])){
 } else{
     $poblacion ="Sin Valor";
 }
+
+
 
 if (isset($_POST['puntuacion'])){
     if ($puntuacion == ' '){

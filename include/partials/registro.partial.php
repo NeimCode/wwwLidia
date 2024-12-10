@@ -51,6 +51,15 @@
     </label>
 </fieldset>
 
+<input type="checkbox" name="frutas[]" value="manzana" >Manzana<br>
+<input type="checkbox" name="frutas[]" value="naranja" >Naranja<br>
+<input type="checkbox" name="frutas[]" value="melon" >Melon<br>
+<input type="checkbox" name="frutas[]" value="banana" >Banana<br>
+<input type="checkbox" name="frutas[]" value="caqui" >Caqui<br>
+<input type="checkbox" name="frutas[]" value="uva" >Uva<br>
+
+
+
 <label for="number">Puntuar del 1-5:</label>
 <input type="number" class="form-control" name="puntuacion" value="0" min="1" max="5" id="numero">
 <input type="range" min="1" max="100" value="1" id="slider" name="multiplicador">

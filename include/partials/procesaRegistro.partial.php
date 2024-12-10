@@ -41,6 +41,13 @@
                 break;
         }
         ?>
+            <h1>Información de <?php echo ucfirst($poblacion); ?></h1>
+    <ul>
+        <li><strong>Habitants:</strong> <?php echo $datosPoblacion['habitants']; ?></li>
+        <li><strong>Comarca:</strong> <?php echo $datosPoblacion['comarca']; ?></li>
+        <li><strong>Gentilici:</strong> <?php echo $datosPoblacion['gentilici']; ?></li>
+        <li><strong>Superfície geogràfica:</strong> <?php echo $datosPoblacion['superficie']; ?></li>
+    </ul>
     <p><strong>Telefono</strong>
     <?php
     echo "<span>" . $tel . "</span>";
@@ -49,6 +56,37 @@
         <?php
         echo "<span>" . $horaRepar . "</span>";
         ?></p>
+
+        <p><Strong>Fruta preferida:</Strong></p>
+        <?php
+        $cantidadFruta = count($frutas);
+        for ($i=0; $i < $cantidadFruta ; $i++) { 
+            switch ($frutas[$i]) {
+                case 'manzana':
+                    echo '<img src="../img/manzana.webp" alt="losaranes" class="gatito">';
+                    break;
+                case 'banana':
+                    echo '<img src="../img/banana.png" alt="losaranes" class="gatito">';
+                    break;
+                case 'uva':
+                    echo '<img src="../img/uva.png" alt="losaranes" class="gatito">';
+                    break;
+                case 'caqui':
+                    echo '<img src="../img/caqui.webp" alt="losaranes" class="gatito">';
+                    break;
+                case 'melon':
+                    echo '<img src="../img/melon.webp" alt="losaranes" class="gatito">';
+                    break;
+                case 'naranja':
+                    echo '<img src="../img/nranja.webp" alt="losaranes" class="gatito">';
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+    ?>
     <p><strong>Puntuacion</strong>
         <?php
                 echo $puntuacion . "*" .$multiplicador;

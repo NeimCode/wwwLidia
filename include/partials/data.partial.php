@@ -6,5 +6,5 @@ $dia_mes = date("j");
 $mes = date("n") - 1;
 $anyo = date("Y");
 $data_actual = $dias[$dia_semana] . ", " . $dia_mes . " de " . $meses[$mes] . " de " . $anyo;
-echo $data_actual;
+echo '<span class="data">' . $data_actual . '</span>';
 ?>

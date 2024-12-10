@@ -91,25 +91,25 @@ body {
 }
 
 
-.especial{
+.especial {
     color: #ff0d00 !important;
     background-color: #ffaca8;
     border: #ff6961 1px solid;
 }
 
-.masDiez{
+.masDiez {
     color: #ffffff !important;
     background-color: #000000;
     border: #686868 1px solid;
 }
 
-.gatos{
+.gatos {
     color: #f6b8c8 !important;
     background-color: #a6234d;
     border: #eb88c7 1px solid;
 }
 
-.elquesea{
+.elquesea {
     color: #000000 !important;
     background-color: #858585;
     border: #000000 1px solid;
@@ -133,7 +133,7 @@ body {
     width: 60%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-content: center;
-    gap: 10px;         /* Agrega espacio entre las imágenes */
+    gap: 10px;
 }
 
 .registro label {
@@ -190,25 +190,25 @@ body {
 
 .gatito {
     display: inline-block;
-    max-width: 100px;      
-    margin: 5px;            
-    vertical-align: middle; 
+    max-width: 100px;
+    margin: 5px;
+    vertical-align: middle;
 }
 
 #registros {
-    flex-wrap: wrap;   /* Hace que las imágenes se acomoden a la siguiente línea cuando no haya espacio */
+    flex-wrap: wrap;
 
 }
 
 #registros p {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
     color: red;
 }
 
 #registros span {
-    margin-left: 5px; 
+    margin-left: 5px;
     color: gray;
 }
 
@@ -218,12 +218,20 @@ body {
 
 #numero {
     display: inline-block;
-     width: 50px;
-     margin-right: 10px;
+    width: 50px;
+    margin-right: 10px;
 }
 
 #slider {
     display: inline-block;
-     width: 30%;
-     margin-right: 10px;
+    width: 30%;
+    margin-right: 10px;
+}
+
+.data{
+    border: green 1px solid;
+    padding: 1%;
+    border-radius: 40px;
+    background-color: white;
+    color: green;
 }

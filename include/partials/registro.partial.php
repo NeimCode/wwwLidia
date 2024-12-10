@@ -1,13 +1,13 @@
 <section class="seccionPrincipal">
     <h2 class="section-title">Registre</h2>
     <form class="registro" form method="post" action="./include/procesaRegistro.php">
-        <label for="nombre">Nom: <span>*</span></label>
+        <label for="nombre">Nombre: <span>*</span></label>
         <input type="text" id="name" name="nombre" required>
 
-        <label for="apellido">Cognoms:</label>
+        <label for="apellido">Apellidos:</label>
         <input type="text" id="surname" name="apellido">
 
-        <label for="direccion">Adreça:</label>
+        <label for="direccion">Dirección:</label>
         <input type="text" id="address" name="direccion">
 
         <label for="correo">Correu Electrònic: <span>*</span></label>
@@ -25,7 +25,7 @@
             <option value="losaRanes">La Llosa de Ranes</option>
         </select>
 
-        <label for="tel">Telèfon:</label>
+        <label for="tel">Telefono:</label>
         <input type="tel" id="phone" name="tel">
 
         <fieldset>
@@ -48,7 +48,7 @@
             </label>
         </fieldset>
         <label for="number">Puntuar del 1-5:</label>
-        <input type="number" class="form-control" name="puntuar" value="puntuar" min="0" max="5">
+        <input type="number" class="form-control" name="puntuar" value="puntuacion" min="0" max="5">
         <div class="form-buttons">
             <button type="submit">Envia</button>
             <button type="reset">Neteja</button>

@@ -1,114 +1,85 @@
 <section class="registro" id="registros">
-    <p><strong>Nombre:</strong></p>
-    <?php
-        echo $nombre;
-    ?>
-    <p><strong>Apellidos:</strong></p>
-    <?php
-        echo $apellido;
-    ?>
-    <p><strong>Dirección:</strong></p>
-    <?php
+    <p><strong>Nombre:</strong>
+        <?php
+        echo "<span>" . $nombre . "</span>";
+        ?> </p>
+    <p><strong>Apellidos:</strong>
+        <?php
+        echo "<span>" . $apellido . "</span>";
+        ?> </p>
+    <p><strong>Dirección:</strong>
+        <?php
+        echo "<span>" . $direccion . "</span>";
+        ?> </p>
+    <p><strong>Correo electrónico:</strong>
+        <?php
+        echo "<span>" . $correo . "</span>";
+        ?> </p>
+    <p><strong>Contraseña</strong>
+        <?php
 
-    if (isset($_POST['direccion']) && strcmp(trim(htmlspecialchars($_POST['direccion'])), "") != 0) {
-        echo $direccion;
-    } else {
-        echo "Sin valor";
-    }
-    ?>
-    <p><strong>Correo electrónico:</strong></p>
-    <?php
-        echo $correo;
-    ?>
-    <p><strong>Contraseña</strong></p>
-    <?php
+        echo "<span>" . $password . "</span>";
+        ?> </p>
+    <p><strong>Población:</strong>
+        <?php
+        echo $poblacion; '</p>';
+        switch ($poblacion) {
+            case 'xativa':
+                echo '<img src="../img/xativa.jpg" alt="xativa">';
+                break;
+            case 'genoves':
+                echo '<img src="../img/genoves.jpg" alt="genoves">';
+                break;
+            case 'novetle':
+                echo '<img src="../img/novetle.jpg" alt="novetle">';
+                break;
+            case 'LosaRanes':
+                echo '<img src="../img/losaranes.jpg" alt="losaranes">';
+                break;
 
-    if (isset($_POST['password']) && strcmp(trim(htmlspecialchars($_POST['password'])), "") != 0) {
-        echo $password;
-    } else {
-        echo "Sin valor";
-    }
-    ?>
-    <p><strong>Población:</strong></p>
-    <?php
-
-
-    if (isset($_POST['poblacion']) && strcmp(trim(htmlspecialchars($_POST['poblacion'])), "") != 0) {
-        if ($poblacion == 'xativa') {
-            echo $poblacion;
-           echo '<img src="../img/xativa.jpg" alt="xativa">';
-        } else if ($poblacion == 'genoves') {
-            echo $poblacion;
-           echo '<img src="../img/genoves.jpg" alt="genoves">';
-        } else if ($poblacion == 'novetle') {
-            echo $poblacion;
-           echo '<img src="../img/novetle.jpg" alt="novetle">';
-        } else if ($poblacion == 'losaRanes') {
-            echo $poblacion;
-           echo '<img src="../img/losaranes.jpg" alt="losaranes">';
+            default:
+                break;
         }
-    } else {
-        echo "Sin valor";
-    }
-    ?>
-    <p><strong>Telefono</strong></p>
+        ?>
+    <p><strong>Telefono</strong>
     <?php
-
-
-    if (isset($_POST['tel']) && strcmp(trim(htmlspecialchars($_POST['tel'])), "") != 0) {
-        echo $tel;
-    } else {
-        echo "Sin valor";
-    }
-    ?>
-    <p><strong>Horario repartimiento</strong></p>
-    <?php
-
-    if (isset($_POST['horaRepar']) && strcmp(trim(htmlspecialchars($_POST['horaRepar'])), "") != 0) {
-        echo $horaRepar;
-    } else {
-        echo "Sin valor";
-    }
-    ?>
-        <p><strong>Puntuacion</strong></p>
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['puntuar'])) {
-        $puntuacion = trim(htmlspecialchars($_POST['puntuar']));
-    }
-    if (isset($_POST['puntuar']) && strcmp(trim(htmlspecialchars($_POST['puntuar'])), "") != 0) {
+    echo "<span>" . $tel . "</span>";
+    ?></p>
+    <p><strong>Horario repartimiento</strong>
+        <?php
+        echo "<span>" . $horaRepar . "</span>";
+        ?></p>
+    <p><strong>Puntuacion</strong>
+        <?php
         switch ($puntuacion) {
             case 1:
                 for ($i = 0; $i < $puntuacion; $i++) {
-                    echo '<img src="../img/gato.jpg" alt="losaranes" class="gatito">';
+                    echo '<img src="../../img/gato.jpg" alt="losaranes" class="gatito">';
                 }
                 break;
             case 2:
                 for ($i = 0; $i < $puntuacion; $i++) {
-                    echo '<img src="../img/gato.jpg" alt="losaranes" class="gatito">';
+                    echo '<img src="../../img/gato.jpg" alt="losaranes" class="gatito">';
                 }
                 break;
             case 3:
                 for ($i = 0; $i < $puntuacion; $i++) {
-                    echo '<img src="../img/gato.jpg" alt="losaranes"> class="gatito"';
+                    echo '<img src="../../img/gato.jpg" alt="losaranes"> class="gatito"';
                 }
                 break;
             case 4:
                 for ($i = 0; $i < $puntuacion; $i++) {
-                    echo '<img src="../img/gato.jpg" alt="losaranes"> class="gatito"';
+                    echo '<img src="../../img/gato.jpg" alt="losaranes"> class="gatito"';
                 }
                 break;
             case 5:
                 for ($i = 0; $i < $puntuacion; $i++) {
-                    echo '<img src="../img/gato.jpg" alt="losaranes" class="gatito">';
+                    echo '<img src="../../img/gato.jpg" alt="losaranes" class="gatito">';
                 }
                 break;
             default:
                 # code...
                 break;
         }
-
-    } else {
-        echo "Sin valor";
-    }
-    ?>
+        ?></p>
 </section>

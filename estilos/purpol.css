@@ -7,28 +7,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff;
+    background-color: #f8f0ff;
 }
 
 .header {
-    background-color: #ffcc66;
+    background-color: #a97efc;
     text-align: center;
     padding: 10px;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #6a1b9a;
     border-radius: 30px;
-
 }
 
 .header h1 {
     margin: 0;
     font-size: 24px;
-    color: #8b0000;
+    color: #ffffff;
 }
 
 .header h2 {
     margin: 0;
     font-size: 20px;
-    background-color: #d4f5c0;
+    background-color: #d7b8ff;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 10px;
@@ -37,40 +36,41 @@ body {
 .navegador {
     display: flex;
     justify-content: center;
-    background-color: #cce7f3;
+    background-color: #d1b3ff;
     padding: 10px;
 }
 
 .navegador a {
     margin: 0 10px;
     padding: 10px 20px;
-    background-color: #87ceeb;
+    background-color: #9a67ea;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    color: #fff;
 }
 
 .navegador a:hover {
-    background-color: #4682b4;
+    background-color: #6a1b9a; 
     color: #fff;
 }
 
 .seccionPrincipal {
     text-align: center;
     margin: 20px;
-    border: #000 solid 1px;
+    border: #6a1b9a solid 1px;
 }
 
 .section-title {
-    background-color: #ff9966;
+    background-color: #9a67ea;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
 }
 
 .welcome-box {
-    background-color: #fdfdb2;
+    background-color: #f0e0ff; 
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -91,17 +91,17 @@ body {
 }
 
 .footer {
-    background-color: #d3d3d3;
+    background-color: #d7b8ff;
     text-align: center;
     padding: 10px;
-    border-top: 2px solid #000;
+    border-top: 2px solid #6a1b9a;
     font-size: 14px;
-    color: #000;
+    color: #6a1b9a;
     border-radius: 30px;
 }
 
 .registro {
-    background-color: #fdfdb2;
+    background-color: #f0e0ff;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -114,6 +114,7 @@ body {
     display: block;
     margin-top: 10px;
     font-weight: bold;
+    color: #6a1b9a; 
 }
 
 .registro input,
@@ -121,12 +122,12 @@ body {
     width: 90%;
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #9a67ea;
     border-radius: 5px;
 }
 
 .registro fieldset {
-    border: 1px solid #ccc;
+    border: 1px solid #9a67ea;
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
@@ -134,6 +135,7 @@ body {
 
 .registro legend {
     font-weight: bold;
+    color: #6a1b9a;
 }
 
 .registro .form-buttons {
@@ -151,18 +153,20 @@ body {
 }
 
 .registro button[type="submit"] {
-    background-color: #87ceeb;
+    background-color: #9a67ea; 
+    color: #fff;
 }
 
 .registro button[type="reset"] {
-    background-color: #ff6961;
+    background-color: #6a1b9a; 
+    color: #fff;
 }
 
 .registro button:hover {
     opacity: 0.8;
 }
 
-.gatito{
+.gatito {
     width: 30%;
 }
 
@@ -170,12 +174,12 @@ body {
     display: flex;
     align-items: center;
     gap: 10px; 
-    color: red;
+    color: #6a1b9a; 
 }
 
 #registros span {
     margin-left: 5px; 
-    color: gray;
+    color: #9a67ea;
 }
 
 #registros img {

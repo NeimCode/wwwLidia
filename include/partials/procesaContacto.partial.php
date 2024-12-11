@@ -1,17 +1,19 @@
 <section class="seccionPrincipal">
 <h2 class="seccionBienvenida">Contacto datos recibidos</h2>
 
-<section class="registro" id="registros">
+<section class="registro">
 <div class="campo">
     <p><strong>Correo electrónico:</strong>
     <?php
-        echo $correo;
+        echo "<span>" . $correo. "</span>";
+
     ?>
 </div></p>
 <div class="campo">
     <p><strong>Asunto:</strong>
     <?php
-        echo $asunto;
+        echo "<span>" . $asunto. "</span>";
+
     ?></p>
 </div>
 <div class="campo">

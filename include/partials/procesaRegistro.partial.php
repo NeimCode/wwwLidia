@@ -1,4 +1,6 @@
-<section class="registro" id="registros">
+<h2 class="seccionBienvenida">Registro datos recibidos </h2>
+
+<section class="registro">
     <p><strong>Nombre:</strong>
         <?php
         echo "<span>" . $nombre . "</span>";
@@ -15,7 +17,7 @@
         <?php
         echo "<span>" . $correo . "</span>";
         ?> </p>
-    <p><strong>Contraseña</strong>
+    <p><strong>Contraseña:</strong>
         <?php
 
         echo "<span>" . $password . "</span>";
@@ -38,56 +40,75 @@
                 break;
 
             default:
+            echo '<img src="../img/huh.webp" alt="??">';
                 break;
         }
+
+if ($poblacion != 'Sin Valor') {
+    echo '<h1>Información de '. ($poblacion) . '</h1>';
+    echo '<ul>';
+    echo    '<li><strong>Habitants:</strong>' . $datosPoblacion['habitants'] .'</li>';
+    echo    '<li><strong>Comarca:</strong>' . $datosPoblacion['comarca']. '</li>';
+    echo    '<li><strong>Gentilici:</strong>'.$datosPoblacion['gentilici']. '</li>';
+    echo    '<li><strong>Superfície geogràfica:</strong>'. $datosPoblacion['superficie'] . '</li>';
+    echo '</ul>';
+}
         ?>
-            <h1>Información de <?php echo ucfirst($poblacion); ?></h1>
-    <ul>
-        <li><strong>Habitants:</strong> <?php echo $datosPoblacion['habitants']; ?></li>
-        <li><strong>Comarca:</strong> <?php echo $datosPoblacion['comarca']; ?></li>
-        <li><strong>Gentilici:</strong> <?php echo $datosPoblacion['gentilici']; ?></li>
-        <li><strong>Superfície geogràfica:</strong> <?php echo $datosPoblacion['superficie']; ?></li>
-    </ul>
+
     <p><strong>Telefono</strong>
     <?php
     echo "<span>" . $tel . "</span>";
     ?></p>
-    <p><strong>Horario repartimiento</strong>
+    <p><strong>Horario repartimiento:</strong>
         <?php
         echo "<span>" . $horaRepar . "</span>";
         ?></p>
 
-        <p><Strong>Fruta preferida:</Strong></p>
+<p><strong>Estilo usado:</strong>
         <?php
-        $cantidadFruta = count($frutas);
-        for ($i=0; $i < $cantidadFruta ; $i++) { 
-            switch ($frutas[$i]) {
-                case 'manzana':
-                    echo '<img src="../img/manzana.webp" alt="losaranes" class="gatito">';
-                    break;
-                case 'banana':
-                    echo '<img src="../img/banana.png" alt="losaranes" class="gatito">';
-                    break;
-                case 'uva':
-                    echo '<img src="../img/uva.png" alt="losaranes" class="gatito">';
-                    break;
-                case 'caqui':
-                    echo '<img src="../img/caqui.webp" alt="losaranes" class="gatito">';
-                    break;
-                case 'melon':
-                    echo '<img src="../img/melon.webp" alt="losaranes" class="gatito">';
-                    break;
-                case 'naranja':
-                    echo '<img src="../img/nranja.webp" alt="losaranes" class="gatito">';
-                    break;
-                default:
-                    # code...
-                    break;
+        echo "<span>" . $estiloRegistro . "</span>";
+        ?></p>
+        <p><Strong>Fruta preferida:</Strong>
+        <?php
+        if ($frutas == 'Sin Valor'){
+            echo '<img src="../img/huh.webp" alt="??">';
+
+        } else{
+            $cantidadFruta = count($frutas);
+            for ($i=0; $i < $cantidadFruta ; $i++) { 
+                switch ($frutas[$i]) {
+                    case 'manzana':
+                        echo '<img src="../img/manzana.webp" alt="losaranes" class="gatito">';
+                        break;
+                    case 'banana':
+                        echo '<img src="../img/banana.png" alt="losaranes" class="gatito">';
+                        break;
+                    case 'uva':
+                        echo '<img src="../img/uva.png" alt="losaranes" class="gatito">';
+                        break;
+                    case 'caqui':
+                        echo '<img src="../img/caqui.webp" alt="losaranes" class="gatito">';
+                        break;
+                    case 'melon':
+                        echo '<img src="../img/melon.webp" alt="losaranes" class="gatito">';
+                        break;
+                    case 'naranja':
+                        echo '<img src="../img/nranja.webp" alt="losaranes" class="gatito">';
+                        break;
+                    case 'Sin Valor':
+                        echo '<img src="../img/nranja.webp" alt="losaranes" class="gatito">';
+                        break;
+                    default:
+                    echo '<img src="../img/huh.webp" alt="??">';
+                        break;
+                }
             }
+            echo '</p>';
         }
+       
 
     ?>
-    <p><strong>Puntuacion</strong>
+    <p><strong>Puntuacion:</strong>
         <?php
                 echo $puntuacion . "*" .$multiplicador;
 

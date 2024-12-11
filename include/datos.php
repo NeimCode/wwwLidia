@@ -23,6 +23,12 @@ $datosPoblacion = array(
         'comarca' => 'La Costera',
         'gentilici' => 'Lloser',
         'superficie' => '7.6 km²'
+    ),
+    '' => array(
+        'habitants' => 'Sin Valor',
+        'comarca' => 'Sin Valor',
+        'gentilici' => 'Sin Valor',
+        'superficie' => 'Sin Valor'
     )
 );
 ?>

@@ -31,7 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['correo'])) {
 </head>
 <body>
     <div class="wrapper">
-<?php 
+<?php
+include("./partials/data.partial.php");
 include("./partials/encabezado.partial.php");
 include("./partials/navegador.partial.php");
 include("./procesaNav.php");

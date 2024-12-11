@@ -59,7 +59,6 @@ body {
 .seccionPrincipal {
     text-align: center;
     margin: 20px;
-    border: #000 solid 1px;
 }
 
 .seccionBienvenida {
@@ -132,12 +131,14 @@ body {
     border-radius: 10px;
     width: 60%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
+    text-align: center;
 }
 
 .registro label {
-    display: block;
     margin-top: 10px;
     font-weight: bold;
 }
@@ -195,25 +196,35 @@ body {
     vertical-align: middle;
 }
 
-#registros {
-    flex-wrap: wrap;
 
-}
 
-#registros p {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.registro p {
+    display: flex;            /* Esto asegura que los elementos dentro de <p> estén alineados en línea */
+    align-items: center;      /* Alinea verticalmente los elementos dentro de <p> */
+    gap: 10px;                /* Espacio entre el párrafo y el input */
+    justify-content: center;  /* Asegura que los elementos estén centrados si hay más espacio */
     color: red;
+    text-align: center;
 }
 
-#registros span {
+.registro input {
+    width: auto;              /* Esto ajusta el input al tamaño necesario */
+    padding: 10px;
+    margin: 0;                /* Elimina el margen superior e inferior */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;             /* Esto hace que el input ocupe el espacio restante */
+}
+
+
+.registro p span {
     margin-left: 5px;
     color: gray;
+    padding: 5px;
 }
 
-#registros img {
-    width: 10%;
+.registro img {
+    width: 50%;
 }
 
 #numero {
@@ -238,11 +249,15 @@ body {
     top: 10px;
 }
 
-ul {
+.campo ul {
     padding: 0;
     margin: 0;
 }
 
-ul li {
+.campo ul li {
     display: inline-block;
+}
+
+.importante {
+    color: red;
 }

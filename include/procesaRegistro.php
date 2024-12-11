@@ -34,12 +34,12 @@ if (isset($_POST['multiplicador'])){
 if (isset($_POST['apellido']) && trim($_POST['apellido']) !== '') {
     $apellido = trim(htmlspecialchars($_POST['apellido']));
 } else {
-    $apellido = 'Sin valor';
+    $apellido = 'Sin Valor';
 }
 
 if (isset($_POST['direccion'])){
     if ($direccion == ''){
-    $direccion = 'Sin valor';
+    $direccion = 'Sin Valor';
     } else{
         $direccion=trim(htmlspecialchars($_POST['direccion']));
 
@@ -50,7 +50,7 @@ if (isset($_POST['direccion'])){
 
 if (isset($_POST['correo'])){
     if ($correo == ''){
-    $correo = 'Sin valor';
+    $correo = 'Sin Valor';
     } else{
         $correo=trim(htmlspecialchars($_POST['correo']));
 
@@ -61,7 +61,7 @@ if (isset($_POST['correo'])){
 
 if (isset($_POST['password'])){
     if ($password == ''){
-    $password = 'Sin valor';
+    $password = 'Sin Valor';
     } else{
         $password=trim(htmlspecialchars($_POST['password']));
 
@@ -71,7 +71,7 @@ if (isset($_POST['password'])){
 }
 if (isset($_POST['tel'])){
     if ($tel == ''){
-    $tel = 'Sin valor';
+    $tel = 'Sin Valor';
     } else{
         $tel=trim(htmlspecialchars($_POST['tel']));
 
@@ -83,7 +83,7 @@ if (isset($_POST['tel'])){
 
 if (isset($_POST['horaRepar'])){
     if ($horaRepar == ''){
-    $horaRepar = 'Sin valor';
+    $horaRepar = 'Sin Valor';
     } else{
         $horaRepar=trim(htmlspecialchars($_POST['horaRepar']));
 
@@ -95,8 +95,8 @@ if (isset($_POST['horaRepar'])){
 if (isset($_POST['poblacion']) && array_key_exists($_POST['poblacion'], $datosPoblacion)) {
     $poblacion = $_POST['poblacion'];
     $datosPoblacion = $datosPoblacion[$poblacion];
-    if ($poblacion == ' '){
-    $poblacion = 'Sin valor';
+    if ($poblacion == ''){
+    $poblacion = 'Sin Valor';
 
     } else{
         $poblacion=trim(htmlspecialchars($_POST['poblacion']));
@@ -137,6 +137,9 @@ if (isset($_POST['puntuacion'])){
 
     if(isset($_POST['estiloRegistro'])){
         $estiloRegistro = $_POST['estiloRegistro'];
+        } else {
+    $estiloRegistro ="Sin Valor";
+            
         }
 
     switch ($estiloRegistro) {
@@ -154,6 +157,7 @@ if (isset($_POST['puntuacion'])){
 <body>
     <div class="wrapper">
 <?php 
+include("./partials/data.partial.php");
 include("./partials/encabezado.partial.php");
 include("./partials/navegador.partial.php");
 include("./procesaNav.php");

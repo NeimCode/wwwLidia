@@ -11,6 +11,14 @@ $puntuacion ="";
 $estiloRegistro="";
 $multiplicador = "";
 include ("./datos.php");
+include ("./funcions.php");
+
+
+if (!is_dir("usuaris")) {
+    mkdir("usuaris", 0777, true);
+}
+$file_path = "usuaris/passwd.txt";
+
 
 if (isset($_POST["frutas"])){
     $frutas=$_POST["frutas"];
@@ -48,48 +56,29 @@ if (isset($_POST['direccion'])){
     $direccion ="Sin Valor";
 }
 
-if (isset($_POST['correo'])){
-    if ($correo == ''){
+if (isset($_POST['correo']) && trim($_POST['correo']) !== '') {
+    $correo = trim(htmlspecialchars($_POST['correo']));
+} else {
     $correo = 'Sin Valor';
-    } else{
-        $correo=trim(htmlspecialchars($_POST['correo']));
-
-    }
-} else{
-    $correo ="Sin Valor";
 }
 
-if (isset($_POST['password'])){
-    if ($password == ''){
+
+if (isset($_POST['password']) && trim($_POST['password']) !== '') {
+    $password = trim(htmlspecialchars($_POST['password']));
+} else {
     $password = 'Sin Valor';
-    } else{
-        $password=trim(htmlspecialchars($_POST['password']));
-
-    }
-} else{
-    $password ="Sin Valor";
 }
-if (isset($_POST['tel'])){
-    if ($tel == ''){
+
+if (isset($_POST['tel']) && trim($_POST['tel']) !== '') {
+    $tel = trim(htmlspecialchars($_POST['tel']));
+} else {
     $tel = 'Sin Valor';
-    } else{
-        $tel=trim(htmlspecialchars($_POST['tel']));
-
-    }
-} else{
-    $tel="Sin Valor";
 }
 
-
-if (isset($_POST['horaRepar'])){
-    if ($horaRepar == ''){
+if (isset($_POST['horaRepar']) && trim($_POST['horaRepar']) !== '') {
+    $horaRepar = trim(htmlspecialchars($_POST['horaRepar']));
+} else {
     $horaRepar = 'Sin Valor';
-    } else{
-        $horaRepar=trim(htmlspecialchars($_POST['horaRepar']));
-
-    }
-} else{
-    $horaRepar="Sin Valor";
 }
 
 if (isset($_POST['poblacion']) && array_key_exists($_POST['poblacion'], $datosPoblacion)) {
@@ -118,6 +107,9 @@ if (isset($_POST['puntuacion'])){
 } else{
     $puntuacion ="Sin Valor";
 }
+
+
+$resultat = meterUsuario($nombre, $correo, $password, $file_path);
 
 ?>
 
@@ -161,6 +153,7 @@ include("./partials/data.partial.php");
 include("./partials/encabezado.partial.php");
 include("./partials/navegador.partial.php");
 include("./procesaNav.php");
+mostrarMensaje($resultat, $correo);
 include("./partials/procesaRegistro.partial.php");
 include("./partials/pie.partial.php");
 ?>

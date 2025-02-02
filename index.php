@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+$_SESSION["persona"]="Rubén"; 
+$persona = $_SESSION["persona"];
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

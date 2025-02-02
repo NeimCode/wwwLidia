@@ -4,7 +4,7 @@
     <form class="registro" id="registros" form method="post" action="./include/procesaRegistro.php">
         <div class="campo">
             <label for="nombre">Nombre: <span class="importante">*</span></label>
-            <input type="text" id="name" name="nombre" required>
+            <input type="text" id="name" name="nombre" pattern="[^:]*" required>
         </div>
         <div class="campo">
             <label for="apellido">Apellidos:</label>
@@ -16,11 +16,11 @@
         </div>
         <div class="campo">
             <label for="correo">Correu Electrònic: <span class="importante">*</span></label>
-            <input type="email" id="email" name="correo" required>
+            <input type="email" id="email" name="correo" pattern="[^:]*" required>
         </div>
         <div class="campo">
-            <label for="password">Contrasenya:</label>
-            <input type="password" id="password" name="password">
+            <label for="password">Contrasenya: <span class="importante">*</span></label>
+            <input type="password" id="password" name="password" pattern="[^:]*" required>
         </div>
         <div class="campo">
             <label for="poblacion">Població:</label>

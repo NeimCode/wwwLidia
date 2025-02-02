@@ -2,21 +2,22 @@
 session_start();
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
-    $email = strtolower(trim($_POST['email'])); 
-    $password = trim($_POST['password']);
+    $email = strtolower(trim($_POST['email']));
+    $contra = trim($_POST['password']);
 
-$file = '/usuaris/passwd.txt';
-    $lines = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); 
-    $userFound = false;
-    foreach ($lines as $line) {
-        list($stored_email, $stored_password) = explode(':', $line);
+    $file = __DIR__ . "/usuaris/passwd.txt";
+    $lineas = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    $usuarioEncontrado = false;
 
-        if (strtolower($stored_email) === $email) {
-            $userFound = true;
-            if (password_verify($password, $stored_password)) {
+    foreach ($lineas as $linea) {
+        list($email_guardado, $contra_guardada) = explode(':', $linea);
+
+        if (strtolower($email_guardado) === $email) {
+            $usuarioEncontrado = true;
+            if (password_verify($contra, $contra_guardada)) {
                 $_SESSION['user'] = $email;
-                $_SESSION['error'] = "Test.";
-                header("Location: ../index.php"); 
+                unset($_SESSION['error']);
+                header("Location: ../index.php");
                 exit;
             } else {
                 $_SESSION['error'] = "La contraseña no es correcta";
@@ -26,9 +27,10 @@ $file = '/usuaris/passwd.txt';
         }
     }
 
-    if (!$userFound) {
+    if (!$usuarioEncontrado) {
         $_SESSION['error'] = "El usuario no existe :c";
         header("Location: ../index.php");
         exit;
     }
-}
+
+}   

@@ -33,9 +33,11 @@ if (isset($_POST['estiloRegistro'])) {
     <title>Fruiteria Verduleria Online</title>    
     <?php 
     echo $estiloCSS;
+    
 if (isset($_SESSION['error'])) {
     echo '<div class="error">' . $_SESSION['error'] . '</div>';
 }
+
 
     $apartat="";
     if(isset($_GET['apartat'])){

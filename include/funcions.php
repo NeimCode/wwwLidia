@@ -20,11 +20,12 @@ function meterUsuario(string $nom, string $email, string $password, string $file
     return false;
 }
 function mostrarMensaje (bool $resultat, string $email) {
-    $message = $resultat 
-        ? "Usuario con correo $email registrado correctamente!" 
-        : "¡Error! El usuario con el correo $email ya existe :c";
-    $color = $resultat ? 'green' : 'red';
-    echo "<p style='color:$color;'>$message</p>";
+
+    if ($resultat) {
+        echo " <p class='registroLogin'>Usuario con correo $email registrado correctamente!</p>";
+    } else{
+        echo "<p class='registroLogin'>¡Error! El usuario con el correo $email ya existe :c</p>";
+    }
 }
 
 // function missatgeErrorLogin($error) {

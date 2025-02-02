@@ -26,4 +26,22 @@ function mostrarMensaje (bool $resultat, string $email) {
     $color = $resultat ? 'green' : 'red';
     echo "<p style='color:$color;'>$message</p>";
 }
+
+// function missatgeErrorLogin($error) {
+//     switch ($error) {
+//         case 'usuari_inexistent':
+//             echo '<div class="error">L\'usuari no existeix. Si us plau, comprova el correu electrònic introduït.</div>';
+//             break;
+//         case 'contrasenya_incorrecta':
+//             echo '<div class="error">La contrasenya no és correcta. Si us plau, intenta-ho de nou.</div>';
+//             break;
+//         case 'camp_buit':
+//             echo '<div class="error">Tots els camps són obligatoris. Si us plau, completa el formulari.</div>';
+//             break;
+//         default:
+//             echo '';
+//             break;
+//     }
+// }
+
 ?>

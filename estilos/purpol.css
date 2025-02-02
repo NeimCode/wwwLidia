@@ -7,27 +7,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f0ff;
+    background-color: #f3e6f9; /* Color de fondo morado claro */
 }
 
 .header {
-    background-color: #a97efc;
+    background-color: #9b59b6; /* Morado vibrante */
     text-align: center;
     padding: 10px;
-    border-bottom: 2px solid #6a1b9a;
+    border-bottom: 2px solid #000;
     border-radius: 30px;
 }
 
 .header h1 {
     margin: 0;
     font-size: 24px;
-    color: #ffffff;
+    color: #4b0082; /* Morado oscuro */
 }
 
 .header h2 {
     margin: 0;
     font-size: 20px;
-    background-color: #d7b8ff;
+    background-color: #e1d0f0; /* Color morado claro */
     display: inline-block;
     padding: 5px 10px;
     border-radius: 10px;
@@ -36,41 +36,39 @@ body {
 .navegador {
     display: flex;
     justify-content: center;
-    background-color: #d1b3ff;
+    background-color: #dcd0f0; /* Morado suave */
     padding: 10px;
 }
 
 .navegador a {
     margin: 0 10px;
     padding: 10px 20px;
-    background-color: #9a67ea;
+    background-color: #8a2be2; /* Color morado intenso */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    color: #fff;
 }
 
 .navegador a:hover {
-    background-color: #6a1b9a; 
+    background-color: #6a0dad; /* Morado más oscuro */
     color: #fff;
 }
 
 .seccionPrincipal {
     text-align: center;
     margin: 20px;
-    border: #6a1b9a solid 1px;
 }
 
 .seccionBienvenida {
-    background-color: #9a67ea;
+    background-color: #8a2be2; /* Morado fuerte */
     color: #fff;
     padding: 10px;
     border-radius: 5px;
 }
 
 .welcome-box {
-    background-color: #f0e0ff; 
+    background-color: #f0e4f9; /* Morado muy suave */
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -90,31 +88,57 @@ body {
     border: 2px solid #ddd;
 }
 
+.especial {
+    color: #ff0d00 !important;
+    background-color: #d3a1c9; /* Morado claro con acento rosado */
+    border: #d6a1b5 1px solid;
+}
+
+.masDiez {
+    color: #ffffff !important;
+    background-color: #2e0854; /* Morado casi negro */
+    border: #a06b98 1px solid;
+}
+
+.gatos {
+    color: #f6b8c8 !important;
+    background-color: #9c4d96; /* Morado oscuro */
+    border: #e97fbf 1px solid;
+}
+
+.elquesea {
+    color: #000000 !important;
+    background-color: #858585;
+    border: #000000 1px solid;
+}
+
 .footer {
-    background-color: #d7b8ff;
+    background-color: #dcd0f0;
     text-align: center;
     padding: 10px;
-    border-top: 2px solid #6a1b9a;
+    border-top: 2px solid #000;
     font-size: 14px;
-    color: #6a1b9a;
+    color: #000;
     border-radius: 30px;
 }
 
 .registro {
-    background-color: #f0e0ff;
+    background-color: #f0e4f9;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
     width: 60%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
 }
 
 .registro label {
-    display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #6a1b9a; 
 }
 
 .registro input,
@@ -122,12 +146,12 @@ body {
     width: 90%;
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #9a67ea;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .registro fieldset {
-    border: 1px solid #9a67ea;
+    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
@@ -135,7 +159,6 @@ body {
 
 .registro legend {
     font-weight: bold;
-    color: #6a1b9a;
 }
 
 .registro .form-buttons {
@@ -153,13 +176,11 @@ body {
 }
 
 .registro button[type="submit"] {
-    background-color: #9a67ea; 
-    color: #fff;
+    background-color: #8a2be2; /* Morado fuerte */
 }
 
 .registro button[type="reset"] {
-    background-color: #6a1b9a; 
-    color: #fff;
+    background-color: #d43f8d; /* Rosa morado */
 }
 
 .registro button:hover {
@@ -167,21 +188,83 @@ body {
 }
 
 .gatito {
-    width: 30%;
+    display: inline-block;
+    max-width: 100px;
+    margin: 5px;
+    vertical-align: middle;
 }
 
-.registros p {
+.registro p {
     display: flex;
     align-items: center;
-    gap: 10px; 
-    color: #6a1b9a; 
+    gap: 10px;
+    justify-content: center;
+    color: red;
+    text-align: center;
 }
 
-.registros span {
-    margin-left: 5px; 
-    color: #9a67ea;
+.registro input {
+    width: auto;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;
 }
 
-.registros img {
+.registro p span {
+    margin-left: 5px;
+    color: gray;
+    padding: 5px;
+}
+
+.registro img {
     width: 50%;
+}
+
+#numero {
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+}
+
+#slider {
+    display: inline-block;
+    width: 30%;
+    margin-right: 10px;
+}
+
+.data {
+    border: green 1px solid;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: white;
+    color: green;
+    position: absolute;
+    top: 10px;
+}
+
+.campo ul {
+    padding: 0;
+    margin: 0;
+}
+
+.campo ul li {
+    display: inline-block;
+}
+
+.importante {
+    color: red;
+}
+
+.estilo {
+    border: 1px solid #9b59b6;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    color: #9b59b6;
+    position: absolute;
+    top: 10px;
+    right: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

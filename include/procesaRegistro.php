@@ -127,22 +127,6 @@ $resultat = meterUsuario($nombre, $correo, $password, $file_path);
     $apartat = $_GET['apartat'];
     }
 
-    if(isset($_POST['estiloRegistro'])){
-        $estiloRegistro = $_POST['estiloRegistro'];
-        } else {
-    $estiloRegistro ="Sin Valor";
-            
-        }
-
-    switch ($estiloRegistro) {
-        case 'amarillo':
-            echo '<link rel="stylesheet" href="../estilos/amarillo.css">';
-            break;
-        case 'morado':
-            echo '<link rel="stylesheet" href="../estilos/purpol.css">';
-            break;
-    }
-
     ?>
     
 </head>

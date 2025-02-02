@@ -47,20 +47,7 @@
                 </label>
             </fieldset>
         </div>
-        <fieldset>
-            <div class="campo">
 
-                <legend>Estilos registro:</legend>
-                <label>
-                    <input type="radio" name="estiloRegistro" value="morado" id="morado">Morado
-
-                </label>
-                <label>
-                    <input type="radio" name="estiloRegistro" value="amarillo" id="amarillo">Amarillo
-
-                </label>
-            </div>
-        </fieldset>
         <div class="campo">
 
             <input type="checkbox" name="frutas[]" value="manzana">Manzana<br>

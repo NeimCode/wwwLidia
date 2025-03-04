@@ -24,7 +24,7 @@ switch ($estiloRegistro) {
 <div class="estilo">
     <legend>Estilos registro:</legend>
     <label>
-        <input type="radio" name="estiloRegistro" value="morado" id="morado" checked>
+        <input type="radio" name="estiloRegistro" value="morado" id="morado">
         <span>Morado</span>
     </label>
     <label>

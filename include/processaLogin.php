@@ -17,7 +17,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     
         if (strtolower($email_guardado) === $email) {
             if ($contra === $contra_guardada) {
-                $_SESSION['user'] = $email;
+                $_SESSION['persona'] = $nombre_usuario;
                 unset($_SESSION['error']);
                 header("Location: ../index.php");
                 exit;

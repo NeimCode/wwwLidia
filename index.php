@@ -1,27 +1,41 @@
 <?php
-
 session_start();
-$_SESSION["persona"]="Rubén"; 
+
+if (!isset($_SESSION["persona"])) {
+    $_SESSION["persona"] = null; 
+}
+
 $persona = $_SESSION["persona"];
 
-if (isset($_POST['estiloRegistro'])) {
-    $estiloRegistro = $_POST['estiloRegistro'];
-    
-    switch ($estiloRegistro) {
-        case 'amarillo':
-            $estiloCSS = '<link rel="stylesheet" href="./estilos/amarillo.css">';
-            break;
-        case 'morado':
-            $estiloCSS = '<link rel="stylesheet" href="./estilos/purpol.css">';
-            break;
-        default:
-            $estiloCSS = '<link rel="stylesheet" href="styles.css">';
-            break;
+
+if (!isset($_SESSION["estiloRegistro"])) {
+    $_SESSION["estiloRegistro"] = "default";
+}
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST['estiloRegistro'])) {
+        $_SESSION["estiloRegistro"] = $_POST['estiloRegistro'];
+    } else {
+        $_SESSION["estiloRegistro"] = "default"; 
     }
-} else {
-    $estiloCSS = '<link rel="stylesheet" href="styles.css">';
+}
+
+$estiloRegistro = $_SESSION["estiloRegistro"];
+
+switch ($estiloRegistro) {
+    case 'amarillo':
+        $estiloCSS = '<link rel="stylesheet" href="./estilos/amarillo.css">';
+        break;
+    case 'morado':
+        $estiloCSS = '<link rel="stylesheet" href="./estilos/purpol.css">';
+        break;
+    default:
+        $estiloCSS = '<link rel="stylesheet" href="styles.css">';
+        break;
 }
 ?>
+
+
 
 
 
@@ -52,10 +66,18 @@ if (isset($_SESSION['error'])) {
 <?php 
 include("./include/partials/data.partial.php");
 include("./include/partials/css.partial.php");
-include("./include/partials/login.partial.php");
 include("./include/partials/encabezado.partial.php");
 include("./include/partials/navegador.partial.php");
+if ($_SESSION['persona'] == "admin") {
+    include("./include/partials/bienvenido.partial.php");
+    include("./include/partials/admin.partial.php");
+} elseif ($_SESSION['persona'] !== null) {
+    include("./include/partials/bienvenido.partial.php");
+} else {
+    include("./include/partials/login.partial.php");
 include("./include/procesaNav.php");
+
+}
 include("./include/partials/pie.partial.php");
 
 ?>

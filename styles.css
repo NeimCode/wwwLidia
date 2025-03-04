@@ -270,7 +270,7 @@ body {
     color: #008000;
     position: absolute;
     top: 10px;
-    right: 20%;
+    left: 25%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -280,7 +280,6 @@ body {
     border-radius: 40px;
     background-color: #ffffff;
     color: #008000;
-    position: absolute;
     top: 10px;
     right: 20%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

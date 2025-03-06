@@ -28,6 +28,11 @@ function mostrarMensaje (bool $resultat, string $email) {
     }
 }
 
+function redirigirSiError($mensaje) {
+    header("Location: /wwwLidia/index.php?apartat=registro&error=" . urlencode($mensaje));
+    exit();
+}
+
 // function missatgeErrorLogin($error) {
 //     switch ($error) {
 //         case 'usuari_inexistent':

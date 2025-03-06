@@ -23,6 +23,15 @@
             <input type="password" id="password" name="password" pattern="[^:]*" required>
         </div>
         <div class="campo">
+            <label for="password">Confirma la contrasenya: <span class="importante">*</span></label>
+            <input type="password" id="password_confirm" name="password" pattern="[^:]*" required>
+        </div>
+            <?php
+            if (isset($_GET['error'])) {
+        echo "<p style='color: red;'>" . htmlspecialchars($_GET['error']) . "</p>";
+    }
+    ?>
+        <div class="campo">
             <label for="poblacion">Població:</label>
             <select id="city" name="poblacion">
                 <option value="">Tria una població...</option>

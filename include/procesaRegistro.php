@@ -63,10 +63,17 @@ if (isset($_POST['correo']) && trim($_POST['correo']) !== '') {
 }
 
 
-if (isset($_POST['password']) && trim($_POST['password']) !== '') {
-    $password = trim(htmlspecialchars($_POST['password']));
-} else {
-    $password = 'Sin Valor';
+
+if (!isset($_POST['password']) || !isset($_POST['password_confirm'])) {
+    redirigirSiError("Falta alguna de las contraseñas.");
+}
+
+$password = trim($_POST['password']);
+$password_confirm = trim($_POST['password_confirm']);
+
+// Si las contraseñas no coinciden, redirigir
+if ($password !== $password_confirm) {
+    redirigirSiError("Las contraseñas no coinciden. Inténtalo de nuevo.");
 }
 
 if (isset($_POST['tel']) && trim($_POST['tel']) !== '') {

@@ -1,14 +1,11 @@
 <?php
-session_start(); // Iniciar la sesión
+session_start(); 
 
-// Eliminar todas las variables de sesión
-unset($_SESSION['persona']);  // O la variable de sesión específica que contiene el nombre del usuario
-unset($_SESSION['user']);     // Si también tienes el correo o cualquier otra información en la sesión
+unset($_SESSION['persona']);
+unset($_SESSION['user']);    
 
-// Destruir la sesión
-session_destroy(); // Destruye toda la sesión
+session_destroy(); 
 
-// Redirigir al usuario a la página de inicio o página de login
-header("Location: ../index.php"); // Cambia esto a la página a la que quieras redirigir
+header("Location: ../index.php"); 
 exit;
 ?>

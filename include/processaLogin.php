@@ -22,7 +22,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 header("Location: ../index.php");
                 exit;
             } else {
-                $_SESSION['error'] = "La contraseña no es correcta  $contra $contra_guardada ";
+                $_SESSION['error'] = "La contraseña no es correcta :c" ;
                 header("Location: ../index.php");
                 exit;
             }

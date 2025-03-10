@@ -1,49 +1,39 @@
 <?php
 session_start();
 
+// Si no hay una sesión establecida, definir persona como null
 if (!isset($_SESSION["persona"])) {
     $_SESSION["persona"] = null; 
 }
 
 $persona = $_SESSION["persona"];
+$cookieName = ($persona !== null) ? "css_" . $persona : "css_invitado";
 
-// Eeeh tema de galletitas aquí-.
+// 🔹 Guardar la preferencia de CSS si se envía por POST
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['estiloRegistro'])) {
+    $estiloSeleccionado = $_POST['estiloRegistro'];
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (isset($_POST['estiloRegistro'])) {
-        $_SESSION["estiloRegistro"] = $_POST['estiloRegistro'];
-
-        setcookie("css_" . $_SESSION["persona"], $_POST['estiloRegistro'], time() + (30 * 24 * 60 * 60), "/");
+    // Verificar si el estilo seleccionado es válido
+    if ($estiloSeleccionado === "amarillo" || $estiloSeleccionado === "morado") {
+        $_SESSION["estiloRegistro"] = $estiloSeleccionado;
+        setcookie($cookieName, $estiloSeleccionado, time() + (30 * 24 * 60 * 60), "/");
     } else {
-        $_SESSION["estiloRegistro"] = "default"; 
-    }
-}
-
-if (!isset($_SESSION["estiloRegistro"])) {
-    if (isset($_COOKIE["css_" . $_SESSION["persona"]])) {
-        $_SESSION["estiloRegistro"] = $_COOKIE["css_" . $_SESSION["persona"]];
-    } else {
+        // Si no se selecciona un estilo válido (por ejemplo, ninguno), asignar "default"
         $_SESSION["estiloRegistro"] = "default";
+        setcookie($cookieName, "default", time() + (30 * 24 * 60 * 60), "/");
     }
 }
 
-//Aquí acaba el tema de las cookies wowowo
-
+// 🔹 Si no hay un estilo en sesión, intentar obtenerlo de la cookie correcta
 if (!isset($_SESSION["estiloRegistro"])) {
-    $_SESSION["estiloRegistro"] = "default";
-}
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (isset($_POST['estiloRegistro'])) {
-        $_SESSION["estiloRegistro"] = $_POST['estiloRegistro'];
+    if (isset($_COOKIE[$cookieName])) {
+        $_SESSION["estiloRegistro"] = $_COOKIE[$cookieName];
     } else {
-        $_SESSION["estiloRegistro"] = "default"; 
+        $_SESSION["estiloRegistro"] = "default"; // Estilo por defecto si no hay ninguno
     }
 }
 
-
-
-
+// 🔹 Definir el CSS según el estilo elegido
 $estiloRegistro = $_SESSION["estiloRegistro"];
 
 switch ($estiloRegistro) {
@@ -54,10 +44,13 @@ switch ($estiloRegistro) {
         $estiloCSS = '<link rel="stylesheet" href="./estilos/purpol.css">';
         break;
     default:
-        $estiloCSS = '<link rel="stylesheet" href="styles.css">';
+        $estiloCSS = '<link rel="stylesheet" href="./estilos/styles.css">'; // Estilo por defecto
         break;
 }
 ?>
+
+
+
 
 
 
@@ -71,10 +64,6 @@ switch ($estiloRegistro) {
     <title>Fruiteria Verduleria Online</title>    
     <?php 
     echo $estiloCSS;
-    
-if (isset($_SESSION['error'])) {
-    echo '<div class="error">' . $_SESSION['error'] . '</div>';
-}
 
 
     $apartat="";
@@ -104,6 +93,9 @@ include("./include/procesaNav.php");
 } else {
     include("./include/partials/navegador.partial.php");
     include("./include/partials/login.partial.php");
+    if (isset($_SESSION['error'])) {
+        echo '<div class="error">' . $_SESSION['error'] . '</div>';
+    }
 include("./include/procesaNav.php");
 
 }

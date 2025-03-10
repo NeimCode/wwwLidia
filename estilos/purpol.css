@@ -7,11 +7,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f3e6f9; /* Color de fondo morado claro */
+    background-color: #f2e6f5; /* Color de fondo morado claro */
 }
 
 .header {
-    background-color: #9b59b6; /* Morado vibrante */
+    background-color: #9b59b6; /* Morado brillante */
     text-align: center;
     padding: 10px;
     border-bottom: 2px solid #000;
@@ -21,13 +21,13 @@ body {
 .header h1 {
     margin: 0;
     font-size: 24px;
-    color: #4b0082; /* Morado oscuro */
+    color: #6a1b9a; /* Morado oscuro */
 }
 
 .header h2 {
     margin: 0;
     font-size: 20px;
-    background-color: #e1d0f0; /* Color morado claro */
+    background-color: #e1bee7; /* Morado pálido */
     display: inline-block;
     padding: 5px 10px;
     border-radius: 10px;
@@ -36,14 +36,14 @@ body {
 .navegador {
     display: flex;
     justify-content: center;
-    background-color: #dcd0f0; /* Morado suave */
+    background-color: #d1c4e9; /* Morado suave */
     padding: 10px;
 }
 
 .navegador a {
     margin: 0 10px;
     padding: 10px 20px;
-    background-color: #8a2be2; /* Color morado intenso */
+    background-color: #ba68c8; /* Morado cálido */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -51,7 +51,7 @@ body {
 }
 
 .navegador a:hover {
-    background-color: #6a0dad; /* Morado más oscuro */
+    background-color: #8e24aa; /* Morado más oscuro */
     color: #fff;
 }
 
@@ -61,14 +61,14 @@ body {
 }
 
 .seccionBienvenida {
-    background-color: #8a2be2; /* Morado fuerte */
+    background-color: #7b1fa2; /* Morado fuerte */
     color: #fff;
     padding: 10px;
     border-radius: 5px;
 }
 
 .welcome-box {
-    background-color: #f0e4f9; /* Morado muy suave */
+    background-color: #f3e5f5; /* Morado muy suave */
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -90,20 +90,20 @@ body {
 
 .especial {
     color: #ff0d00 !important;
-    background-color: #d3a1c9; /* Morado claro con acento rosado */
-    border: #d6a1b5 1px solid;
+    background-color: #f3e5f5;
+    border: #ff6961 1px solid;
 }
 
 .masDiez {
     color: #ffffff !important;
-    background-color: #2e0854; /* Morado casi negro */
-    border: #a06b98 1px solid;
+    background-color: #000000;
+    border: #686868 1px solid;
 }
 
 .gatos {
     color: #f6b8c8 !important;
-    background-color: #9c4d96; /* Morado oscuro */
-    border: #e97fbf 1px solid;
+    background-color: #a6234d;
+    border: #eb88c7 1px solid;
 }
 
 .elquesea {
@@ -113,7 +113,7 @@ body {
 }
 
 .footer {
-    background-color: #dcd0f0;
+    background-color: #f8f8f8;
     text-align: center;
     padding: 10px;
     border-top: 2px solid #000;
@@ -123,7 +123,7 @@ body {
 }
 
 .registro {
-    background-color: #f0e4f9;
+    background-color: #f3e5f5; /* Morado muy suave */
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -176,11 +176,11 @@ body {
 }
 
 .registro button[type="submit"] {
-    background-color: #8a2be2; /* Morado fuerte */
+    background-color: #ba68c8; /* Morado cálido */
 }
 
 .registro button[type="reset"] {
-    background-color: #d43f8d; /* Rosa morado */
+    background-color: #ff6961;
 }
 
 .registro button:hover {
@@ -258,13 +258,94 @@ body {
 }
 
 .estilo {
-    border: 1px solid #9b59b6;
+    border: 1px solid #008000;
     padding: 10px;
     border-radius: 40px;
     background-color: #ffffff;
-    color: #9b59b6;
+    color: #008000;
     position: absolute;
     top: 10px;
     right: 20%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login {
+    border: 1px solid #008000;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    color: #008000;
+    top: 10px;
+    right: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registroLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background-color: #f3e5f5;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#tabla-usuarios {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #e1bee7; /* Morado claro */
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#tabla-usuarios th, 
+#tabla-usuarios td {
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+#tabla-usuarios th {
+    background-color: #ba68c8; /* Morado cálido */
+    color: white;
+    text-align: center;
+}
+
+#tabla-usuarios tr:nth-child(even) {
+    background-color: #f3e5f5; /* Morado claro */
+}
+
+#tabla-usuarios tr:nth-child(odd) {
+    background-color: #f8bbd0; /* Morado muy suave */
+}
+
+#tabla-usuarios td a img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+#tabla-usuarios .admin-row {
+    background-color: #d1c4e9 !important; /* Morado suave */
+    font-weight: bold;
+    text-align: center;
+}
+
+.error {
+    color: #fff;
+    background-color: #ff4d4d;
+    border: 1px solid #cc0000;
+    padding: 10px;
+    margin: 10px auto;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }

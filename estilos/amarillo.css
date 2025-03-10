@@ -7,27 +7,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff9e6;
+    background-color: #fff9e6; /* Color de fondo amarillo claro */
 }
 
 .header {
-    background-color: #f1c40f;
+    background-color: #ffeb3b; /* Amarillo brillante */
     text-align: center;
     padding: 10px;
-    border-bottom: 2px solid #f39c12;
+    border-bottom: 2px solid #000;
     border-radius: 30px;
 }
 
 .header h1 {
     margin: 0;
     font-size: 24px;
-    color: #e67e22;
+    color: #b8860b; /* Amarillo oscuro */
 }
 
 .header h2 {
     margin: 0;
     font-size: 20px;
-    background-color: #fbe76b;
+    background-color: #fffacd; /* Amarillo pálido */
     display: inline-block;
     padding: 5px 10px;
     border-radius: 10px;
@@ -36,14 +36,14 @@ body {
 .navegador {
     display: flex;
     justify-content: center;
-    background-color: #f5d74e;
+    background-color: #fff8b2; /* Amarillo muy suave */
     padding: 10px;
 }
 
 .navegador a {
     margin: 0 10px;
     padding: 10px 20px;
-    background-color: #f1c40f;
+    background-color: #f7c948; /* Amarillo cálido */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -51,7 +51,7 @@ body {
 }
 
 .navegador a:hover {
-    background-color: #e67e22;
+    background-color: #f57c00; /* Amarillo anaranjado */
     color: #fff;
 }
 
@@ -61,14 +61,14 @@ body {
 }
 
 .seccionBienvenida {
-    background-color: #f39c12;
+    background-color: #ffcc00; /* Amarillo fuerte */
     color: #fff;
     padding: 10px;
     border-radius: 5px;
 }
 
 .welcome-box {
-    background-color: #fff9e6;
+    background-color: #fff9b2; /* Amarillo muy suave */
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -89,41 +89,41 @@ body {
 }
 
 .especial {
-    color: #f39c12 !important;
-    background-color: #f9c07e;
-    border: #f1c40f 1px solid;
+    color: #ff0d00 !important;
+    background-color: #ffebcc;
+    border: #ff6961 1px solid;
 }
 
 .masDiez {
     color: #ffffff !important;
-    background-color: #2c3e50;
+    background-color: #000000;
     border: #686868 1px solid;
 }
 
 .gatos {
-    color: #f9e3b8 !important;
-    background-color: #f1c40f;
-    border: #fbe76b 1px solid;
+    color: #f6b8c8 !important;
+    background-color: #a6234d;
+    border: #eb88c7 1px solid;
 }
 
 .elquesea {
     color: #000000 !important;
-    background-color: #f9e49b;
+    background-color: #858585;
     border: #000000 1px solid;
 }
 
 .footer {
-    background-color: #f5d74e;
+    background-color: #f8f8f8;
     text-align: center;
     padding: 10px;
-    border-top: 2px solid #f39c12;
+    border-top: 2px solid #000;
     font-size: 14px;
-    color: #e67e22;
+    color: #000;
     border-radius: 30px;
 }
 
 .registro {
-    background-color: #fff9e6;
+    background-color: #fff9b2; /* Amarillo suave */
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -176,11 +176,11 @@ body {
 }
 
 .registro button[type="submit"] {
-    background-color: #f1c40f;
+    background-color: #f7c948; /* Amarillo cálido */
 }
 
 .registro button[type="reset"] {
-    background-color: #e74c3c;
+    background-color: #ff6961;
 }
 
 .registro button:hover {
@@ -235,11 +235,11 @@ body {
 }
 
 .data {
-    border: #f39c12 1px solid;
+    border: green 1px solid;
     padding: 10px;
     border-radius: 40px;
     background-color: white;
-    color: #f39c12;
+    color: green;
     position: absolute;
     top: 10px;
 }
@@ -258,13 +258,95 @@ body {
 }
 
 .estilo {
-    border: 1px solid #f39c12;
+    border: 1px solid #008000;
     padding: 10px;
     border-radius: 40px;
     background-color: #ffffff;
-    color: #f39c12;
+    color: #008000;
     position: absolute;
     top: 10px;
     right: 20%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login{
+    border: 1px solid #008000;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    color: #008000;
+    top: 10px;
+    right: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registroLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background-color: #fdfdb2;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s;
+}
+
+#tabla-usuarios {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff3b3; /* Amarillo claro */
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#tabla-usuarios th, 
+#tabla-usuarios td {
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+#tabla-usuarios th {
+    background-color: #f7c948; /* Amarillo cálido */
+    color: white;
+    text-align: center;
+}
+
+#tabla-usuarios tr:nth-child(even) {
+    background-color: #fdf7c6; /* Amarillo muy claro */
+}
+
+#tabla-usuarios tr:nth-child(odd) {
+    background-color: #fff9e6; /* Amarillo muy suave */
+}
+
+#tabla-usuarios td a img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+#tabla-usuarios .admin-row {
+    background-color: #ffeb99 !important; /* Amarillo suave */
+    font-weight: bold;
+    text-align: center;
+}
+
+.error {
+    color: #fff;
+    background-color: #ff4d4d;
+    border: 1px solid #cc0000;
+    padding: 10px;
+    margin: 10px auto;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }

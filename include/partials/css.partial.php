@@ -23,6 +23,7 @@ switch ($estiloRegistro) {
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 <div class="estilo">
     <legend>Estilos registro:</legend>
+    <input type="hidden" name="estiloRegistro" value="default">
     <label>
         <input type="radio" name="estiloRegistro" value="morado" id="morado">
         <span>Morado</span>

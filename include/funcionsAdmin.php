@@ -1,41 +1,30 @@
 <?php
 function gestionaUsuaris() {
-    $file_path = "./include/usuaris/passwd.txt";  // Ruta del archivo de usuarios
+    $filename = './include/usuaris/passwd.txt';
+    $fileContents = file($filename);
+    echo '<table id="tabla-usuarios" class="tabla-estilizada">';
 
-    if (!file_exists($file_path)) {
-        echo "<p>No hay usuarios registrados.</p>";
-        return;
-    }
-
-    echo '<table border="1">
-            <tr>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Acción</th>
-            </tr>';
-
-    // Leer el contenido del archivo en un array
-    $usuarios = file($file_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-
-    // Recorrer cada línea del archivo
-    foreach ($usuarios as $usuario) {
-        list($nombre, $correo, $password) = explode(":", $usuario);  // Separar los datos de cada usuario
-
-        echo "<tr>
-                <td>$nombre</td>
-                <td>$correo</td>
-                <td>";
-
-        // Si el correo no es el de admin, permitir la eliminación
-        if ($correo !== "admin@dam.com") {
-            echo "<a href='./eliminaUsuari.php?correo=$correo'>
-                      <img src='./imagenes/eliminar.png' alt='Eliminar usuario'/>
-                  </a>";
+    echo '<tr><th>Nom</th><th>Email</th><th>Acció</th></tr>';
+    
+    foreach ($fileContents as $line) {
+        $user = explode(":", $line); 
+        $name = $user[0];
+        $email = $user[1];
+        $password = $user[2];
+        
+        if ($email != 'admin@dam.com') {
+            echo '<tr>';
+            echo '<td>' . htmlspecialchars($name) . '</td>';
+            echo '<td>' . htmlspecialchars($email) . '</td>';
+            echo '<td><a href="eliminaUsuari.php?email=' . urlencode($email) . '"><img src="elimina.png" alt="elimina" /></a></td>';
+            echo '</tr>';
         } else {
-            echo "Admin";  // No se puede eliminar al admin
+            echo '<tr>';
+            echo '<td>' . htmlspecialchars($name) . '</td>';
+            echo '<td>' . htmlspecialchars($email) . '</td>';
+            echo '<td></td>';
+            echo '</tr>';
         }
-
-        echo "</td></tr>";
     }
 
     echo '</table>';
